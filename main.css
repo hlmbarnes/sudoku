@@ -3,104 +3,84 @@
 	width: 900px;
 	height:900px;
 	display:inline-block;
-
+	border-top-color: black;
+	border-top-style: solid;
 
 }
 
-.grid_vert{
-  border-right-color:black;
-  border-right-style:solid;
-}
+/**grid_vert{
+  border-right-color: black;
+  border-right-style: solid;
+}*/
 
 .grid_hor{
 	border-bottom-style: solid;
-	border-top-color: black;
+	border-bottom-color: black;
 }
+
 .box {
 	height:100px;
 	width:100px;
 	display: inline-block;
-	/*border-top-color: black;
-	border-top-style: solid;*/
+  border-top-color: black;
+	border-top-style: solid;
+	border-right-color:black;
+	border-right-style: solid;
+	border-left-color: black;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-bottom-color: black;
 	text-align: center;
 	font-size:30px;
 	vertical-align: middle;
+	line-height: 100px;
 }
-
-
 
 #row1 {
-/*	border: black;
-  border-style: solid;*/
-  display: inline-block;
-/*  border-top-color:black;
-  border-top-style: solid;*/
-/*  line-height: 75px;
-}*/
+	display: inline-block;
+
+	border-top-color: black;
+	border-top-style: solid;
+
+}
 
 #row2 {
-	border: black;
-  border-style: solid;
- display: inline-block;
-}
+	display: inline-block;
 
+}
 
 #row3{
-/*  border: black;
-  border-style: solid;*/
- display: inline-block;
- border-bottom-style: solid;
- border-bottom-color:black;
+
+	display: inline-block;
+	border-bottom-style: solid;
+	border-bottom-color:black;
+	border-bottom-style: solid;
 }
 
-.row4{
- /* border: black;
-  border-style: solid;*/
- display: inline-block;
+#row4{
+	display: inline-block;
 }
 
-.row5{
-/*  border: black;
-  border-style: solid;*/
- display: inline-block;
+#row5{
+
+	display: inline-block;
 }
 
-.row6{
-/* 	border: black;
-  border-style: solid;*/
- display: inline-block;
- border-bottom-color:black;
- border-bottom-style: solid;
+#row6{
+	display: inline-block;
+
 }
 
-.row7{
-/*	border: black;
-  border-style: solid;
-*/
- display: inline-block;
+#row7{
+	display: inline-block;
 }
 
-.row8{
-/* 	border: black;
-  border-style: solid;*/
- display: inline-block;
+#row8{
+	display: inline-block;
 }
 
+#row9{
+	display: inline-block;
 
-.row9{
-/*  border: black;
-  border-style: solid;*/
- display: inline-block;
- border-bottom-color:black;
- border-bottom-style: solid;
 }
 
-.Row1Col3{
-	border-right-color:black;
-	border-right-style: solid;
-}
-
-.Row1Col3{
-	border-right-color:black;
-	border-right-style: solid;
-}
