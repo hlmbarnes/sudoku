@@ -7,6 +7,15 @@
 
 }
 
+.grid_vert{
+  border-right-color:black;
+  border-right-style:solid;
+}
+
+.grid_hor{
+	border-bottom-style: solid;
+	border-top-color: black;
+}
 .box {
 	height:100px;
 	width:100px;
@@ -18,10 +27,7 @@
 	vertical-align: middle;
 }
 
-.grid_vert{
-  border-right-color:black;
-  border-right-style:solid;
-}
+
 
 #row1 {
 /*	border: black;
