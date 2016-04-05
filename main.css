@@ -3,19 +3,22 @@
 	width: 900px;
 	height:900px;
 	display:inline-block;
-	border-top-color: black;
+/*	border-top-color: black;
 	border-top-style: solid;
+	position:absolute;*/
 
 }
 
-/**grid_vert{
-  border-right-color: black;
+/*.grid_vert{
+  border-right-color: blue;
   border-right-style: solid;
+  border-right-width: 5px;
 }*/
 
 .grid_hor{
 	border-bottom-style: solid;
-	border-bottom-color: black;
+	border-bottom-color: blue;
+	border-bottom-width: 5px;
 }
 
 .box {
@@ -34,53 +37,70 @@
 	font-size:30px;
 	vertical-align: middle;
 	line-height: 100px;
+	border-width: 1px;
 }
 
 #row1 {
 	display: inline-block;
-
 	border-top-color: black;
 	border-top-style: solid;
+/*	border-width:1px;*/
 
 }
 
 #row2 {
 	display: inline-block;
+	border-width: 1px;
 
 }
 
-#row3{
+#row3 {
 
 	display: inline-block;
 	border-bottom-style: solid;
-	border-bottom-color:black;
+	border-bottom-color:blue;
 	border-bottom-style: solid;
+	border-width: 5px;
+
 }
 
 #row4{
 	display: inline-block;
+	border-width: 1px;
 }
 
 #row5{
 
 	display: inline-block;
+	border-width: 1px;
 }
 
 #row6{
 	display: inline-block;
+	border-color:blue;
+	border-width: 5px;
 
 }
 
 #row7{
 	display: inline-block;
+	border-width: 1px;
 }
 
 #row8{
 	display: inline-block;
+	border-width: 1px;
 }
 
 #row9{
 	display: inline-block;
-
+	border-bottom-color: black;
+	border-bottom-style: solid;
+	border-width: 1px;
 }
 
+.grid_vert{
+  border-right-color: blue;
+  border-right-style: solid;
+  border-right-width: 5px;
+}
