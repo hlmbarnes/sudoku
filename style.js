@@ -14,15 +14,23 @@ var Array = [
   [1,2,3,4,5,6,7,8,9],
   [1,2,3,4,5,6,7,8,9] ]
 
-var RandomArray =[];
+var RandomArray = Array.slice();
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
 var hideBoxes = function(Array){
 	for (i=0; i<=8; i++) {
-		function getRandomNumHide(0, 5) {
-  	return Math.floor(Math.random() * 6) + 1;
- 		var hidden = function(
+		var getRandomNumHide(1, 5);
+      for (j=0; j<getRandomNumHide; j++){
+        var hidden = getRandomInt(0,8);
+        RandomArray[i].hidden='';
+      }
+  
+ 		
 		
-		}
+		
 
 
 }
