@@ -3,7 +3,7 @@ $(document).ready(function(){
     
 });
 
-Var Array= [ 
+var Array = [ 
 	[1,2,3,4,5,6,7,8,9],
  	[1,2,3,4,5,6,7,8,9],
  	[1,2,3,4,5,6,7,8,9], 
@@ -16,9 +16,9 @@ Var Array= [
 
 var RandomArray =[];
 
-var hideBoxes (Array){
-	for (i=0; i<= 8; i++) {
-		function getRandomHide(0, 5) {
+var hideBoxes = function(Array){
+	for (i=0; i<=8; i++) {
+		function getRandomNumHide(0, 5) {
   	return Math.floor(Math.random() * 6) + 1;
  		var hidden = function(
 		
