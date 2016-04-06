@@ -16,7 +16,6 @@ var easyArray = [
   [2,3,9,8,4,1,5,6,7] ]
 
 
-// var RandomArray = easyArray.slice();
 
 var shuffle = function (easyArray){
   for (i=0; i <= 8; i++){
@@ -27,18 +26,15 @@ var shuffle = function (easyArray){
       }
     }
   }
-
-  // var dontEdit = function (){
-  //   var boxval = $()
-  // }
 }
+
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
 $("#Puzzle_Gen").on('click', function (){
-  
+
   shuffle(easyArray);
   var RandomArray = $.extend(true,[], easyArray);
   for (i=0; i<=8; i++) {
@@ -50,13 +46,11 @@ $("#Puzzle_Gen").on('click', function (){
   }
   alert(RandomArray);
 
-
   for (i=0; i<=8; i++){
     for (j=0; j<=8; j++){
       var divA = $("#Row" + (i + 1) + "Col" + (j + 1));
       var rAndC = $(divA);
-
-      rAndC.text(easyArray[i][j]);
+      rAndC.text(RandomArray[i][j]);
       if (rAndC.text()==='') {
         rAndC.attr("contentEditable", 'true');
       }
@@ -64,17 +58,20 @@ $("#Puzzle_Gen").on('click', function (){
     }
   }
 
-  // $("#Puzzle_Gen").on('click', shuffle(easyArray){})
-
 });
 
-
-
 $("#Puzzle_Clear").on('click', function(){
-  for(i=0; i<=9; i++) {
-
+  for(i=0; i<=8; i++) {
+    for (j=0; j<=8; j++) {
+      var divB = $("#Row" + (i + 1) + "Col" + (j+ 1));
+      var rAndC2 = $(divB);
+      rAndC2.attr("contentEditable", 'false');
+      rAndC2.text("");
+    }
   }
 })
+
+
 
 
 
