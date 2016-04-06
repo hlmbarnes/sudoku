@@ -1,7 +1,7 @@
 .9_by_9_box{
 	margin:auto;
-	width: 900px;
-	height:900px;
+	width: 630px;
+	height:630px;
 	display:inline-block;
 /*	border-top-color: black;
 	border-top-style: solid;
@@ -18,8 +18,8 @@
 }
 
 .box {
-	height:100px;
-	width:100px;
+	height:70px;
+	width:70px;
 	display: inline-block;
   border-top-color: black;
 	border-top-style: solid;
@@ -30,9 +30,9 @@
 	border-bottom-style: solid;
 	border-bottom-color: black;
 	text-align: center;
-	font-size:30px;
+	font-size:15px;
 	vertical-align: middle;
-	line-height: 100px;
+	line-height: 70px;
 	border-width: 1px;
 }
 
