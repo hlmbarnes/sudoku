@@ -28,6 +28,7 @@ $("#Puzzle_Gen").on('click', function (){
     for (j=0; j<getRandomNumHide; j++){
       var hidden = getRandomInt(0,8);
       RandomArray[i][hidden]='';
+
       }
   }
   // }
@@ -38,8 +39,14 @@ $("#Puzzle_Gen").on('click', function (){
   // $("#Row1Col1").text(10);
   for (i=0; i<=8; i++){
     for (j=0; j<=8; j++){
-      var rAndC = $("#Row" + (i + 1) + "Col" + (j + 1));
+      var divA = $("#Row" + (i + 1) + "Col" + (j + 1));
+      var rAndC = $(divA);
+
       rAndC.text(easyArray[i][j]);
+      if (rAndC.text()==='') {
+        rAndC.attr("contentEditable", 'true');
+      }
+
     }
   }
 });
