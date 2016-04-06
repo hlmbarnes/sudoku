@@ -16,7 +16,7 @@ var easyArray = [
   [2,3,9,8,4,1,5,6,7] ]
 
 
-var RandomArray = easyArray.slice();
+// var RandomArray = easyArray.slice();
 
 var shuffle = function (easyArray){
   for (i=0; i <= 8; i++){
@@ -27,6 +27,10 @@ var shuffle = function (easyArray){
       }
     }
   }
+
+  // var dontEdit = function (){
+  //   var boxval = $()
+  // }
 }
 
 function getRandomInt(min, max) {
@@ -35,6 +39,8 @@ function getRandomInt(min, max) {
 
 $("#Puzzle_Gen").on('click', function (){
   
+  shuffle(easyArray);
+  var RandomArray = $.extend(true,[], easyArray);
   for (i=0; i<=8; i++) {
     var getRandomNumHide = getRandomInt(1, 5); 
     for (j=0; j<getRandomNumHide; j++){
@@ -57,11 +63,18 @@ $("#Puzzle_Gen").on('click', function (){
 
     }
   }
-  
-  // $("#Puzzle_Gen").on('click', shuffle(){})
+
+  // $("#Puzzle_Gen").on('click', shuffle(easyArray){})
 
 });
 
+
+
+$("#Puzzle_Clear").on('click', function(){
+  for(i=0; i<=9; i++) {
+
+  }
+})
 
 
 
