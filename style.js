@@ -57,6 +57,8 @@ $("#Puzzle_Gen").on('click', function (){
 
     }
   }
+  $("#Puzzle_Gen").on('click', shuffle(){});
+
 });
 
 $()
