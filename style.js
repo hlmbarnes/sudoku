@@ -3,6 +3,7 @@ $(document).ready(function(){
     
 });
 
+
 var easyArray = [ 
 	[8,2,7,1,5,4,3,9,6],
  	[9,6,5,3,2,7,1,4,8],
@@ -14,7 +15,19 @@ var easyArray = [
   [1,5,4,7,9,6,8,2,3],
   [2,3,9,8,4,1,5,6,7] ]
 
+
 var RandomArray = easyArray.slice();
+
+var shuffle = function (easyArray){
+  for (i=0; i <= 8; i++){
+    var num = easyArray[i];
+    for (j=0; j<=8; j++); {
+      if (easyArray[i][j] = 3){
+        easyArray[i][j]= 7;
+      }
+    }
+  }
+}
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
