@@ -3,7 +3,7 @@ $(document).ready(function(){
     
 });
 
-var Array = [ 
+var easyArray = [ 
 	[1,2,3,4,5,6,7,8,9],
  	[1,2,3,4,5,6,7,8,9],
  	[1,2,3,4,5,6,7,8,9], 
@@ -14,26 +14,38 @@ var Array = [
   [1,2,3,4,5,6,7,8,9],
   [1,2,3,4,5,6,7,8,9] ]
 
-var RandomArray = Array.slice();
+var RandomArray = easyArray.slice();
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-var hideBoxes = function(Array){
-	for (i=0; i<=8; i++) {
-		var getRandomNumHide(1, 5);
-      for (j=0; j<getRandomNumHide; j++){
-        var hidden = getRandomInt(0,8);
-        RandomArray[i].hidden='';
-      }
+$("#Puzzle_Gen").on('click', function (){
+// var hideBoxes = function(easyArray){
   
- 		
-		
-		
+  for (i=0; i<=8; i++) {
+    var getRandomNumHide = getRandomInt(1, 5); 
+    for (j=0; j<getRandomNumHide; j++){
+      var hidden = getRandomInt(0,8);
+      RandomArray[i][hidden]='';
+      }
+  }
+  // }
+  alert(RandomArray);
 
+  // var box = $("#Row1Col1");
 
-}
+  // $("#Row1Col1").text(10);
+  for (i=0; i<=8; i++){
+    for (j=0; j<=8; j++){
+      var rAndC = $("#Row" + (i + 1) + "Col" + (j + 1));
+      rAndC.text(easyArray[i][j]);
+    }
+  }
+});
+
+$()
+
 
 
 // This is the random min and max function
