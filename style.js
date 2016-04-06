@@ -1,7 +1,5 @@
 $(document).ready(function(){
-	function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+	
     
 });
 
@@ -59,11 +57,12 @@ $("#Puzzle_Gen").on('click', function (){
 
     }
   }
-  $("#Puzzle_Gen").on('click', shuffle(){});
+  
+  // $("#Puzzle_Gen").on('click', shuffle(){})
 
 });
 
-$()
+
 
 
 
