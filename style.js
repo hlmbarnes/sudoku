@@ -3,6 +3,7 @@ $(document).ready(function(){
     
 });
 
+var RandomArray = []; 
 
 var easyArray = [ 
 	[8,2,7,1,5,4,3,9,6],
@@ -15,7 +16,7 @@ var easyArray = [
   [1,5,4,7,9,6,8,2,3],
   [2,3,9,8,4,1,5,6,7] ]
 
-
+var RandomArraySolution = [];
 
 var shuffle = function (easyArray){
   for (i=0; i <= 8; i++){
@@ -36,7 +37,7 @@ function getRandomInt(min, max) {
 $("#Puzzle_Gen").on('click', function (){
 
   shuffle(easyArray);
-  var RandomArray = $.extend(true,[], easyArray);
+  RandomArray = $.extend(true,[], easyArray);
   for (i=0; i<=8; i++) {
     var getRandomNumHide = getRandomInt(1, 5); 
     for (j=0; j<getRandomNumHide; j++){
@@ -67,11 +68,21 @@ $("#Puzzle_Clear").on('click', function(){
       var rAndC2 = $(divB);
       rAndC2.attr("contentEditable", 'false');
       rAndC2.text("");
+      $(divB).css({"background-color": ""});
     }
   }
 })
 
-
+$("#check").on('click', function(){
+  for (i=0; i<=8; i++){
+   for(j=0; j<=8; j++){
+    if (easyArray[i][j] != RandomArray[i][j]) {
+      var divC = $("#Row" + (i + 1) + "Col" + (j+ 1));
+      $(divC).css({"background-color": "red"});
+    }
+   }
+  }
+})
 
 
 
