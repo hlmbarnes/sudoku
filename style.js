@@ -76,9 +76,12 @@ $("#Puzzle_Clear").on('click', function(){
 $("#check").on('click', function(){
   for (i=0; i<=8; i++){
    for(j=0; j<=8; j++){
+    var divC = $("#Row" + (i + 1) + "Col" + (j+ 1));
     if (easyArray[i][j] != RandomArray[i][j]) {
-      var divC = $("#Row" + (i + 1) + "Col" + (j+ 1));
+     
       $(divC).css({"background-color": "red"});
+    } else {
+        $(divC).css({"background-color": ""});
     }
    }
   }
@@ -86,18 +89,3 @@ $("#check").on('click', function(){
 
 
 
-
-// This is the random min and max function
-// function getRandomIntInclusive(min, max) {
-//   return Math.floor(Math.random() * (max - min + 1)) + min;
-// }
-
-// This function is a click to hide value
-    // $("[id^=Row]").on("click",function(e){
-    //     var clear= e.target.id;
-    //     alert("[id=" + clear + "]");
-    //     var tag= "[id=" + clear + "]" ;
-    //     // $(tag).text("");
-    //     tag.toggle();
-
-    // });
