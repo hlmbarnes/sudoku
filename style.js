@@ -3,6 +3,10 @@ $(document).ready(function(){
     
 });
 
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
 var RandomArray = []; 
 
 var easyArray = [ 
@@ -18,21 +22,26 @@ var easyArray = [
 
 var RandomArraySolution = [];
 
-var shuffle = function (easyArray){
+var shuffle = function (){
+  var switch1 = getRandomInt(1,9);
+  var switch2 = getRandomInt(1,9);
   for (i=0; i <= 8; i++){
-    var num = easyArray[i];
     for (j=0; j<=8; j++); {
-      if (easyArray[i][j] = 3){
-        easyArray[i][j]= 7;
+      if (switch1 !=switch2){
+        if (easyArray[i][j] = switch1){
+          easyArray[i][j] = switch2;
+        } if (easyArray[i][j] = switch2) {
+          easyArray[i][j] = switch1;
+        }
+      } else {
+        return;
       }
     }
   }
 }
 
 
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+
 
 $("#Puzzle_Gen").on('click', function (){
 
