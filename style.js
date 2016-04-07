@@ -39,20 +39,59 @@ var shuffle = function (){
 }
 
 
-
-
-
-$("#Puzzle_Gen").on('click', function (){
-
+$("#Puzzle_Gen").on('click', function () { 
   shuffle();
+  var level = $("input[name=level]:checked").val();
   RandomArray = $.extend(true,[], easyArray);
-  for (i=0; i<=8; i++) {
-    var getRandomNumHide = getRandomInt(1, 5); 
-    for (j=0; j<getRandomNumHide; j++){
-      var hidden = getRandomInt(0,8);
-      RandomArray[i][hidden]='';
+  if (level === "Easy") {
+    for (i=0; i <= 8; i++) {
+    // var getRandomNumHide = getRandomInt(1, 5); 
+    // for (j=0; j < getRandomNumHide; j++){
+    //   var hidden = getRandomInt(0,8);
+    //   RandomArray[i][hidden]='';
+    var getRandomNumHide = getRandomInt(1,5);
+      // console.log("hiding", getRandomNumHide)
+    var choices = [0,1,2,3,4,5,6,7,8];
+      for (j=0; j < getRandomNumHide; j++){
+      var index = getRandomInt(0, choices.length - 1); 
+      var position = choices.splice(index, 1)[0];
+        // console.log("hiding", i, choices, index, position);
+      RandomArray[i][position]='';
       }
+    }
+  } 
+
+  else if (level === "Medium") {
+    for (i=0; i <= 8; i++) {
+    // var getRandomNumHide = getRandomInt(5, 7); 
+    // for (j=0; j < getRandomNumHide; j++){
+    //   var hidden = getRandomInt(0,8);
+    //   RandomArray[i][hidden]='';
+      var getRandomNumHide = getRandomInt(5,8);
+      var choices = [0,1,2,3,4,5,6,7,8];
+      for (j=0; j < getRandomNumHide; j++){
+        var index = getRandomInt(0, choices.length - 1); 
+        var position = choices.splice(index, 1)[0];
+        RandomArray[i][position]='';
+
+      }
+    }
   }
+
+  else {
+    for (i=0; i<=8; i++) {
+      var getRandomNumHide = getRandomInt(7,8);
+      // console.log("hiding", getRandomNumHide)
+      var choices = [0,1,2,3,4,5,6,7,8];
+      for (j=0; j < getRandomNumHide; j++){
+        var index = getRandomInt(0, choices.length - 1); 
+        var position = choices.splice(index, 1)[0];
+        // console.log("hiding", i, choices, index, position);
+        RandomArray[i][position]='';
+      }
+    }
+  }
+
   alert(RandomArray);
 
   for (i=0; i<=8; i++){
@@ -63,11 +102,14 @@ $("#Puzzle_Gen").on('click', function (){
       if (rAndC.text()==='') {
         rAndC.attr("contentEditable", 'true');
       }
-
-    }
+    } 
   }
 
 });
+
+
+
+
 
 $("[id^=Row").on('input', function(e){
   var divD = e.target.id;
