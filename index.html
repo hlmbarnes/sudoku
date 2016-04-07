@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Sudoku</title>
-<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -117,14 +117,19 @@
 		</div>
 	</div>
 	<div id="buttons">
-		<button id="Puzzle_Gen" type="submit" class="col-md-3">Generate Puzzle!</button>
-		<button id="Puzzle_Clear" type="submit"class="col-md-3">Clear Puzzle</button>
-		<button id="check" type="submit" class="col-md-3">Check Solution</button>
+		<form>
+  		<input type="radio" name="gender" value="male" checked> Easy<br>
+  		<input type="radio" name="gender" value="female"> Medium<br>
+ 		 	<input type="radio" name="gender" value="other"> Hard
+		</form>
+		<button id="Puzzle_Gen" type="submit" class="col-md-2">Generate Puzzle!</button>
+		<button id="Puzzle_Clear" type="submit"class="col-md-2">Clear Puzzle</button>
+		<button id="check" type="submit" class="col-md-2">Check Solution</button>
 	</div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="style.js"></script>
 </body>
 </html>
