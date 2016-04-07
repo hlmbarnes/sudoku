@@ -61,6 +61,14 @@ $("#Puzzle_Gen").on('click', function (){
 
 });
 
+$("[id^=Row").on('input', function(e){
+  var divD = e.target.id;
+  var rID = divD.substring(3, 4);
+  var cID = divD.substring(7, 8);
+  // alert("Row: " + rID + " Col: " + cID);
+  RandomArray[rID-1][cID-1] =$("#" +divD).text();
+});
+
 $("#Puzzle_Clear").on('click', function(){
   for(i=0; i<=8; i++) {
     for (j=0; j<=8; j++) {
