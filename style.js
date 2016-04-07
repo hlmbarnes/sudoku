@@ -25,27 +25,26 @@ var RandomArraySolution = [];
 var shuffle = function (){
   var switch1 = getRandomInt(1,9);
   var switch2 = getRandomInt(1,9);
-  for (i=0; i <= 8; i++){
-    for (j=0; j<=8; j++); {
-      if (switch1 !=switch2){
-        if (easyArray[i][j] = switch1){
-          easyArray[i][j] = switch2;
-        } if (easyArray[i][j] = switch2) {
-          easyArray[i][j] = switch1;
+  while (switch1 ===switch2){
+    switch1 = getRandomInt(1,9);
+    } for (i=0; i <= 8; i++){
+    for (j=0; j<=8; j++) {
+      if (easyArray[i][j] === switch1){
+        easyArray[i][j] = switch2;
+        } else if (easyArray[i][j] === switch2) {
+        easyArray[i][j] = switch1;
         }
-      } else {
-        return;
+      }  
       }
-    }
-  }
 }
+
 
 
 
 
 $("#Puzzle_Gen").on('click', function (){
 
-  shuffle(easyArray);
+  shuffle();
   RandomArray = $.extend(true,[], easyArray);
   for (i=0; i<=8; i++) {
     var getRandomNumHide = getRandomInt(1, 5); 
