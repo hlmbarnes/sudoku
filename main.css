@@ -12,7 +12,7 @@ body{
 /*	font-family: 'Amatic SC', cursive;*/
 	font-family: 'Shadows Into Light', cursive;
   font-size: 30px;
-  /*text-shadow: 4px 4px 4px #aaa;*/
+
 }
 
 .9_by_9_box{
@@ -111,9 +111,7 @@ body{
 	display:inline-block;
 	position: relative;
 	font-size: 15px;
-	/*font-family: 'Amatic SC', cursive;*/
-/*	width:250px;
-	padding: 10px;*/
+
 
 }
 
