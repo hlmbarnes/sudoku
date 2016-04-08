@@ -2,14 +2,15 @@ dialog{
 	 width: 500px;  
    background:#e8e8e8;
    border: 1px solid #dadada;
-   font-family:sans-serif;
+   font-family: 'Shadows Into Light', cursive;
    padding: 5px 10px 20px 20px;
 }
 
 body{
-	background-image: url("paper3.jpg");
+	background-image: url("waves.jpg");
 	text-align: center;
-	font-family: 'Amatic SC', cursive;
+/*	font-family: 'Amatic SC', cursive;*/
+	font-family: 'Shadows Into Light', cursive;
   font-size: 30px;
   /*text-shadow: 4px 4px 4px #aaa;*/
 }
@@ -41,7 +42,7 @@ body{
 	border-bottom-style: solid;
 	border-bottom-color: black;
 	text-align: center;
-	font-size:25px;
+	font-size:35px;
 	font-weight: bold;
 	vertical-align: middle;
 	line-height: 70px;
@@ -58,7 +59,6 @@ body{
 #row2 {
 	display: inline-block;
 	border-width: 1px;
-
 }
 
 #row3 {
@@ -66,7 +66,6 @@ body{
 	border-bottom-color:black;
 	border-bottom-style: solid;
 	border-width: 5px;
-
 }
 
 #row4{
@@ -82,7 +81,6 @@ body{
 
 #row6{
 	display: inline-block;
-/*	border-color: black;*/
 	border-width: 5px;
 }
 
@@ -113,13 +111,18 @@ body{
 	display:inline-block;
 	position: relative;
 	font-size: 15px;
-	font-family: 'Amatic SC', cursive;
+	/*font-family: 'Amatic SC', cursive;*/
+/*	width:250px;
+	padding: 10px;*/
 
 }
 
 #level{
 	display: inline-block;
 	position:relative;
-	width: 300px;
-	height: 150px;
+	width: 100px;
+	opacity: .8;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
 }

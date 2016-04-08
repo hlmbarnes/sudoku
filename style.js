@@ -1,24 +1,22 @@
 $(document).ready(function(){
-  $(function() {
-    $( "#buttons" ).buttonset();
-  });
-
   $('.box').hover(
     function(){
       var $this = $(this);
-      $this.data('bgcolor', $this.css('background-color')).css('background-color', '#380606');
+      $this.data('bgcolor', $this.css('background-color')).css('background-color', '#73BFBB');
     },
     function(){
       var $this = $(this);
       $this.css('background-color', $this.data('bgcolor'));
     }
-  );   
-    
+  ); 
+
+  $(function() {
+    $( "#buttons" ).buttonset();
+  });
+  $("#buttons").css("opacity", ".65");
 });
 
-$("#box").hover(function(){
-    $(this).css("background-color", "black");
-    })
+
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -97,8 +95,6 @@ $("#Puzzle_Gen").on('click', function () {
     }
   }
 
-  alert(RandomArray);
-
   for (i=0; i<=8; i++){
     for (j=0; j<=8; j++){
       var divA = $("#Row" + (i + 1) + "Col" + (j + 1));
@@ -117,7 +113,6 @@ $("[id^=Row").on('input', function(e){
   var divD = e.target.id;
   var rID = divD.substring(3, 4);
   var cID = divD.substring(7, 8);
-  // alert("Row: " + rID + " Col: " + cID);
   RandomArray[rID-1][cID-1] =$("#" +divD).text();
 });
 
@@ -140,8 +135,7 @@ $("#check").on('click', function(){
    for(j=0; j<=8; j++){
     var divC = $("#Row" + (i + 1) + "Col" + (j+ 1));
     if (easyArray[i][j] != RandomArray[i][j]) {
-     
-      $(divC).css({"background-color": "#380606"});
+      $(divC).css({"background-color": "#FECBAE"});
       counter++;
     } else {
         $(divC).css({"background-color": ""})
@@ -158,6 +152,5 @@ $("#check").on('click', function(){
     }
 
 })
-
 
 
