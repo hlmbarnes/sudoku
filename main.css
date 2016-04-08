@@ -98,7 +98,7 @@ body{
 	display: inline-block;
 	border-bottom-color: black;
 	border-bottom-style: solid;
-	border-width: 1px;
+	border-width: 5px;
 }
 
 .grid_vert{
