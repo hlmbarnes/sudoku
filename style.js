@@ -128,9 +128,10 @@ $("#Puzzle_Clear").on('click', function(){
   }
 })
 
-var counter = 0;
+
 
 $("#check").on('click', function(){
+  var counter = 0;
   for (i=0; i<=8; i++){
    for(j=0; j<=8; j++){
     var divC = $("#Row" + (i + 1) + "Col" + (j+ 1));
