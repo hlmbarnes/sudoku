@@ -62,7 +62,7 @@ $("#Puzzle_Gen").on('click', function () {
   RandomArray = $.extend(true,[], easyArray);
   if (level === "Easy") {
     for (i=0; i <= 8; i++) {
-    var getRandomNumHide = getRandomInt(0,0);
+    var getRandomNumHide = getRandomInt(1,5);
     var choices = [0,1,2,3,4,5,6,7,8];
       for (j=0; j < getRandomNumHide; j++){
       var index = getRandomInt(0, choices.length - 1); 
@@ -151,7 +151,10 @@ $("#check").on('click', function(){
   } if(counter === 0) {
     var dialog= $("#Correct").get(0);
     dialog.show();
-  // alert("Congrats! You solved the puzzle!");
+    var exitButton = $("#exit").get(0);
+    exitButton.onclick = function(){
+      dialog.close();
+    }
     }
 
 })
