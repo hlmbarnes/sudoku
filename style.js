@@ -3,12 +3,16 @@ $(document).ready(function(){
     $( "#buttons" ).buttonset();
   });
 
-  // $(".button").hover(function() {
-  //   $(this).attr("src","button-hover.png");
-  //     }, function() {
-  //   $(this).attr("src","button.png");
-  // });
-
+  $('.box').hover(
+    function(){
+      var $this = $(this);
+      $this.data('bgcolor', $this.css('background-color')).css('background-color', '#380606');
+    },
+    function(){
+      var $this = $(this);
+      $this.css('background-color', $this.data('bgcolor'));
+    }
+  );   
     
 });
 
@@ -137,7 +141,7 @@ $("#check").on('click', function(){
     var divC = $("#Row" + (i + 1) + "Col" + (j+ 1));
     if (easyArray[i][j] != RandomArray[i][j]) {
      
-      $(divC).css({"background-color": "red"});
+      $(divC).css({"background-color": "#380606"});
       counter++;
     } else {
         $(divC).css({"background-color": ""})
@@ -145,10 +149,10 @@ $("#check").on('click', function(){
     }
    }
   } if(counter === 0) {
-    // var dialog= $("#Correct");
-    // dialog.show();
-  alert("Congrats! You solved the puzzle!");
-  }
+    var dialog= $("#Correct").get(0);
+    dialog.show();
+  // alert("Congrats! You solved the puzzle!");
+    }
 
 })
 

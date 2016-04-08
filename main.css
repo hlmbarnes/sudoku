@@ -1,10 +1,16 @@
+dialog{
+	 width: 500px;  
+   background:#e8e8e8;
+   border: 1px solid #dadada;
+   font-family:sans-serif;
+   padding: 5px 10px 20px 20px;
+}
 
 body{
-	background-image: url("paper.jpg");
+	background-image: url("paper3.jpg");
 	text-align: center;
 	font-family: 'Amatic SC', cursive;
-  font-size: 25px;
-  font-weight: light;
+  font-size: 30px;
   /*text-shadow: 4px 4px 4px #aaa;*/
 }
 
@@ -35,7 +41,8 @@ body{
 	border-bottom-style: solid;
 	border-bottom-color: black;
 	text-align: center;
-	font-size:15px;
+	font-size:25px;
+	font-weight: bold;
 	vertical-align: middle;
 	line-height: 70px;
 	border-width: 1px;
@@ -106,6 +113,7 @@ body{
 	display:inline-block;
 	position: relative;
 	font-size: 15px;
+	font-family: 'Amatic SC', cursive;
 
 }
 
