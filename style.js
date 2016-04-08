@@ -5,6 +5,7 @@ $(document).ready(function(){
     
 });
 
+
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
@@ -43,21 +44,15 @@ var shuffle = function (){
 
 $("#Puzzle_Gen").on('click', function () { 
   shuffle();
-  var level = $("input[name=level]:checked").val();
+  var level = $("#level :selected").val();
   RandomArray = $.extend(true,[], easyArray);
   if (level === "Easy") {
     for (i=0; i <= 8; i++) {
-    // var getRandomNumHide = getRandomInt(1, 5); 
-    // for (j=0; j < getRandomNumHide; j++){
-    //   var hidden = getRandomInt(0,8);
-    //   RandomArray[i][hidden]='';
     var getRandomNumHide = getRandomInt(1,5);
-      // console.log("hiding", getRandomNumHide)
     var choices = [0,1,2,3,4,5,6,7,8];
       for (j=0; j < getRandomNumHide; j++){
       var index = getRandomInt(0, choices.length - 1); 
       var position = choices.splice(index, 1)[0];
-        // console.log("hiding", i, choices, index, position);
       RandomArray[i][position]='';
       }
     }
@@ -65,11 +60,7 @@ $("#Puzzle_Gen").on('click', function () {
 
   else if (level === "Medium") {
     for (i=0; i <= 8; i++) {
-    // var getRandomNumHide = getRandomInt(5, 7); 
-    // for (j=0; j < getRandomNumHide; j++){
-    //   var hidden = getRandomInt(0,8);
-    //   RandomArray[i][hidden]='';
-      var getRandomNumHide = getRandomInt(5,8);
+      var getRandomNumHide = getRandomInt(4,7);
       var choices = [0,1,2,3,4,5,6,7,8];
       for (j=0; j < getRandomNumHide; j++){
         var index = getRandomInt(0, choices.length - 1); 
@@ -83,12 +74,10 @@ $("#Puzzle_Gen").on('click', function () {
   else {
     for (i=0; i<=8; i++) {
       var getRandomNumHide = getRandomInt(7,8);
-      // console.log("hiding", getRandomNumHide)
       var choices = [0,1,2,3,4,5,6,7,8];
       for (j=0; j < getRandomNumHide; j++){
         var index = getRandomInt(0, choices.length - 1); 
         var position = choices.splice(index, 1)[0];
-        // console.log("hiding", i, choices, index, position);
         RandomArray[i][position]='';
       }
     }
@@ -133,6 +122,8 @@ $("#Puzzle_Clear").on('click', function(){
   }
 })
 
+var counter = 0;
+
 $("#check").on('click', function(){
   for (i=0; i<=8; i++){
    for(j=0; j<=8; j++){
@@ -140,10 +131,24 @@ $("#check").on('click', function(){
     if (easyArray[i][j] != RandomArray[i][j]) {
      
       $(divC).css({"background-color": "red"});
+      counter++;
     } else {
-        $(divC).css({"background-color": ""});
+        $(divC).css({"background-color": ""})
+
     }
    }
+  } if(counter === 0) {
+    $(function() {
+    $( "#dialog-message" ).dialog({
+      modal: true,
+      buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  });
+    // <pre>$('element').avgrund();</pre>
   }
 })
 

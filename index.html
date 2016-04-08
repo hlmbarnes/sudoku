@@ -2,7 +2,9 @@
 <html>
 <head>
 	<title>Sudoku</title>
+	<link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<!-- 	<link rel="stylesheet" href="../style/avgrund.css"> -->
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -116,20 +118,25 @@
   		<div class="box" id="Row9Col9"></div>
 		</div>
 	</div>
+	<div id="dropdown">
+		<select id="level" name="level">
+	  		<option name="level" value="Easy" selected> Easy </option>
+	  		<option name="level" value="Medium"> Medium </option>
+	 		 	<option name="level" value="Hard"> Hard </option>
+	 	</select>
+	</div>
 	<div id="buttons">
-		<form>
-  		<input type="radio" name="level" value="Easy" checked> Easy<br>
-  		<input type="radio" name="level" value="Medium"> Medium<br>
- 		 	<input type="radio" name="level" value="Hard"> Hard
-		</form>
 		<button id="Puzzle_Gen" type="submit" class="col-md-2">Generate Puzzle!</button>
 		<button id="Puzzle_Clear" type="submit"class="col-md-2">Clear Puzzle</button>
 		<button id="check" type="submit" class="col-md-2">Check Solution</button>
 	</div>
-
+<!-- 	<div id="dialog-message" title="Correct!">
+    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;">  You successfully completed the puzzle! </span>
+	</div> -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<!-- <script src="../jquery.avgrund.js"></script> -->
 <script src="style.js"></script>
 </body>
 </html>

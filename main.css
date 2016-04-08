@@ -1,26 +1,24 @@
+
 body{
-	background-image: url("paper_3.jpg");
+	background-image: url("paper.jpg");
 	text-align: center;
+	font-family: 'Amatic SC', cursive;
+  font-size: 25px;
+  font-weight: light;
+  /*text-shadow: 4px 4px 4px #aaa;*/
 }
+
 .9_by_9_box{
 	margin:auto;
 	width: 630px;
 	height:630px;
 	display:inline-block;
 }
-/*
-input[type=checkbox]:not(old),*/
-/*input[type=radio   ]:not(old){
-  width     : 2px;
-  margin    : 0;
-  padding   : 0;
-  font-size : 1px;
-  opacity   : 0;
-}*/
+
 
 .grid_hor{
 	border-bottom-style: solid;
-	border-bottom-color: blue;
+	border-bottom-color: black;
 	border-bottom-width: 5px;
 }
 
@@ -57,10 +55,8 @@ input[type=checkbox]:not(old),*/
 }
 
 #row3 {
-
 	display: inline-block;
-	border-bottom-style: solid;
-	border-bottom-color:blue;
+	border-bottom-color:black;
 	border-bottom-style: solid;
 	border-width: 5px;
 
@@ -79,9 +75,8 @@ input[type=checkbox]:not(old),*/
 
 #row6{
 	display: inline-block;
-	border-color:blue;
+/*	border-color: black;*/
 	border-width: 5px;
-
 }
 
 #row7{
@@ -102,16 +97,21 @@ input[type=checkbox]:not(old),*/
 }
 
 .grid_vert{
-  border-right-color: blue;
+  border-right-color: black;
   border-right-style: solid;
   border-right-width: 5px;
 }
 
-.buttons{
+#buttons{
 	display:inline-block;
 	position: relative;
+	font-size: 15px;
+
 }
 
-#submit{
+#level{
+	display: inline-block;
 	position:relative;
+	width: 300px;
+	height: 150px;
 }
