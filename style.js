@@ -2,9 +2,19 @@ $(document).ready(function(){
   $(function() {
     $( "#buttons" ).buttonset();
   });
+
+  // $(".button").hover(function() {
+  //   $(this).attr("src","button-hover.png");
+  //     }, function() {
+  //   $(this).attr("src","button.png");
+  // });
+
     
 });
 
+$("#box").hover(function(){
+    $(this).css("background-color", "black");
+    })
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -48,7 +58,7 @@ $("#Puzzle_Gen").on('click', function () {
   RandomArray = $.extend(true,[], easyArray);
   if (level === "Easy") {
     for (i=0; i <= 8; i++) {
-    var getRandomNumHide = getRandomInt(1,5);
+    var getRandomNumHide = getRandomInt(0,0);
     var choices = [0,1,2,3,4,5,6,7,8];
       for (j=0; j < getRandomNumHide; j++){
       var index = getRandomInt(0, choices.length - 1); 
@@ -99,9 +109,6 @@ $("#Puzzle_Gen").on('click', function () {
 });
 
 
-
-
-
 $("[id^=Row").on('input', function(e){
   var divD = e.target.id;
   var rID = divD.substring(3, 4);
@@ -138,18 +145,11 @@ $("#check").on('click', function(){
     }
    }
   } if(counter === 0) {
-    $(function() {
-    $( "#dialog-message" ).dialog({
-      modal: true,
-      buttons: {
-        Ok: function() {
-          $( this ).dialog( "close" );
-        }
-      }
-    });
-  });
-    // <pre>$('element').avgrund();</pre>
+    // var dialog= $("#Correct");
+    // dialog.show();
+  alert("Congrats! You solved the puzzle!");
   }
+
 })
 
 

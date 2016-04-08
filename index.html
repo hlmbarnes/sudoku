@@ -4,12 +4,16 @@
 	<title>Sudoku</title>
 	<link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-<!-- 	<link rel="stylesheet" href="../style/avgrund.css"> -->
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
 	<div class="container" id="header">
 		<h1>Sudoku</h1>
+		<dialog id="Correct">
+    	<h3> Correct! </h3>
+    	<p>You successfully completed the puzzle!</p>
+    	<button id="exit">Close</button>
+    </dialog>
 	</div>
 	<div class="container" id="9_by_9_box">
 		<div class="container" id="row1">
@@ -130,13 +134,10 @@
 		<button id="Puzzle_Clear" type="submit"class="col-md-2">Clear Puzzle</button>
 		<button id="check" type="submit" class="col-md-2">Check Solution</button>
 	</div>
-<!-- 	<div id="dialog-message" title="Correct!">
-    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;">  You successfully completed the puzzle! </span>
-	</div> -->
+	
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-<!-- <script src="../jquery.avgrund.js"></script> -->
 <script src="style.js"></script>
 </body>
 </html>
