@@ -11,16 +11,18 @@ body{
 	text-align: center;
 /*	font-family: 'Amatic SC', cursive;*/
 	font-family: 'Shadows Into Light', cursive;
-  font-size: 30px;
 }
 
+#header{
+	font-size: 30px;
+}
 
 /*cursor{
 	cursor: url(http://dygraphs.com/tests/drawing/cursor-pencil.png), auto;
 }*/
 
-.9_by_9_box{
-	margin:auto;
+.9_by_9_box {
+/*	margin:auto;*/
 	width: 630px;
 	height:630px;
 	display:inline-block;
@@ -58,7 +60,7 @@ body{
 	display: inline-block;
 	border-top-color: black;
 	border-top-style: solid;
-
+	border-radius: 3px;
 }
 
 #row2 {
@@ -104,6 +106,8 @@ body{
 	border-bottom-color: black;
 	border-bottom-style: solid;
 	border-width: 5px;
+	margin-bottom: 50px;
+	border-radius:3px;
 }
 
 .grid_vert{
@@ -112,18 +116,20 @@ body{
   border-right-width: 5px;
 }
 
-#buttons{
-	display:inline-block;
-	position: relative;
-	font-size: 15px;
-}
 
 #level{
 	display: inline-block;
 	position:relative;
 	width: 100px;
 	opacity: .8;
-  padding: 10px;
+  padding: 20px;
   font-size: 15px;
   border: none;
+  margin-bottom: 18px;
+
+}
+
+.buttons{
+	display:inline-block;
+	font-size: 20px;
 }
