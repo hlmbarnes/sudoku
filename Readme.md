@@ -1,5 +1,7 @@
 Project # 1: The Game | Sudoku
 
+http://hlmbarnes.github.io/sudoku/
+
 Technologies Used //
 
 For this project, I utilized HTML, CSS, jQuery and jQuery plugins. Given the way that I structured my grid, I was unable to use bootstrap for my page positioning or some of my animations such as the dialog (when someone successfully completes the puzzle) or the hover over feature. Instead, I used a combination of CSS styling and jQuery manipulations where I manipulated the dom through strategic IDs for my rows, unique box names, and containers. I will discuss this in further detail below in the "Approach Taken" section. 
