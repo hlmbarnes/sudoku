@@ -14,6 +14,21 @@ $(document).ready(function(){
     $( "#buttons" ).buttonset();
   });
   $("#buttons").css("opacity", ".65");
+  // if user clicked on button, the overlay layer or the dialogbox, close the dialog  
+  $('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {   
+    $('#dialog-overlay, #dialog-box').hide();   
+    return false;
+  });
+  
+  // if user resize the window, call the same function again
+  // to make sure the overlay fills the screen and dialogbox aligned to center  
+  $(window).resize(function () {
+    
+    //only do it if the dialog box is not hidden
+    if (!$('#dialog-box').is(':hidden')) popup();   
+  }); 
+
+
 });
 
 
@@ -25,9 +40,9 @@ function getRandomInt(min, max) {
 var RandomArray = []; 
 
 var easyArray = [ 
-	[8,2,7,1,5,4,3,9,6],
- 	[9,6,5,3,2,7,1,4,8],
- 	[3,4,1,6,8,9,7,5,2], 
+  [8,2,7,1,5,4,3,9,6],
+  [9,6,5,3,2,7,1,4,8],
+  [3,4,1,6,8,9,7,5,2], 
   [5,9,3,4,6,8,2,7,1], 
   [4,7,2,5,1,3,6,8,9], 
   [6,1,8,9,7,2,4,3,5],
@@ -109,7 +124,9 @@ $("#Puzzle_Gen").on('click', function () {
 });
 
 
-$("[id^=Row").on('input', function(e){
+ // $("[id^='Row'").on('input', function(e){
+ $("9_by_9_box").on('input', function(e){
+
   var divD = e.target.id;
   var rID = divD.substring(3, 4);
   var cID = divD.substring(7, 8);
@@ -144,12 +161,21 @@ $("#check").on('click', function(){
     }
    }
   } if(counter === 0) {
-    var dialog= $("#Correct").get(0);
-    dialog.show();
-    var exitButton = $("#exit").get(0);
-    exitButton.onclick = function(){
-      dialog.close();
-    }
+// get the screen height and width  
+  var maskHeight = $(document).height();  
+  var maskWidth = $(window).width();
+  
+  // calculate the values for center alignment
+  var dialogTop =  (maskHeight/3) - ($('#dialog-box').height());  
+  var dialogLeft = (maskWidth/2) - ($('#dialog-box').width()/2); 
+  
+  // assign values to the overlay and dialog box
+  $('#dialog-overlay').css({height:maskHeight, width:maskWidth}).show();
+  $('#dialog-box').css({top:dialogTop, left:dialogLeft}).show();
+  
+  // display the message
+  $('#dialog-message').html(message);
+
     }
 
 })
